@@ -4,9 +4,17 @@
     </head>
     <body>
         <h1>Start a new To-Do</h1>
-        <form method="POST" action='/lists/new'>
-            <input name="item_text" id="id_new_item" placeholder="Enter a to-do item" />
-            {% csrf_token %}
-        </form>
+        <form method="POST" action="/lists/new">
+    <!-- 将 input 设为块级元素，并通过 margin 居中 -->
+            <p style="text-align: center;">
+                 <input 
+                    name="item_text" 
+                    id="id_new_item" 
+                    placeholder="Enter a to-do item" 
+                    style="display: block; margin: 0 auto;" 
+                />
+            </p>
+    {% csrf_token %}
+</form>
     </body>
 </html>
